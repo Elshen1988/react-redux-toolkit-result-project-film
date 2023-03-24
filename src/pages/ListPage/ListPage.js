@@ -8,10 +8,19 @@ function ListPage() {
     ])
     const { id } = useParams()
 
-    useEffect(() => {
-        // fetch()
+   
+        useEffect(() => {
+            fetch(`https://www.omdbapi.com/?apikey=e235f813&i=${id}`)
+              .then((response) => response.json())
+              .then((data) => {
+                setMovies([{ title: data.Title, year: data.Year, imdbID: data.imdbID }]);
+              })
+              .catch((error) => {
+                alert('Error:', error);
+              });
+          }, [id]);
         console.log(id);
-    })
+   
     return (
         <div className="list-page">
             <h1 className="list-page__title">Мой список</h1>

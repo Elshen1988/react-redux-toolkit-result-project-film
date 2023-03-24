@@ -18,16 +18,41 @@
 }
 
 .favorites__save {
+ 
     border: none;
     background-color: #496DDB;
     padding: 10px 15px;
     color: #FFEEDB;
     font-size: 14px;
     transition: all 0.2s linear;
+    margin-top: 20px;
+    margin-left: 80px;
 }
 
 .favorites__save:hover {
     cursor: pointer;
     opacity: 0.9;
     transition: all 0.2s linear;
+}
+.favoritImg{
+    width: 30px;
+    
+}
+.favoritImgTd{
+   position: relative;
+   top: 10px;
+   padding-right: 10px;
+}
+.favoritTd{
+    font-weight: 700;
+   color: rgb(5, 114, 49);
+}
+.favoritBtn{
+    margin-left: 8px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: red;
+    font-weight: 800;
 }

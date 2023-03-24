@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
+let initialState = {
     movies: []
 }
 export const moviesSlice = createSlice({
@@ -9,15 +9,11 @@ export const moviesSlice = createSlice({
     reducers: {
         getmovies: (state, action) => {
             state.movies = action.payload
-        },
-        searchmovies: (state, action) => {
-            state.favorite ={...action.payload}
         }
-     
     }
 })
 
 
-export const { getmovies,searchmovies } = moviesSlice.actions;
+export const { getmovies} = moviesSlice.actions;
 
 export default moviesSlice.reducer;

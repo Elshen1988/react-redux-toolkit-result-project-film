@@ -1,6 +1,6 @@
-import React, { Component, useState } from 'react';
+import React, {  useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { getmovies } from '../../redux/slice';
+import { getmovies } from '../../redux/slice/MoviesSlice';
 import './SearchBox.css';
 
 function SearchBox() {
