@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchBox from '../../components/SearchBox/SearchBox';
 import './Header.css';
 function Header() {
     return (
@@ -6,6 +7,7 @@ function Header() {
             <h1 className="header__title">
                 MustSee
             </h1>
+            <SearchBox />
         </header>
     )
 }

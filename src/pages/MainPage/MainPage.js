@@ -1,32 +1,28 @@
 import React from 'react';
 import './MainPage.css';
 import Header from '../../components/Header/Header';
-import SearchBox from '../../components/SearchBox/SearchBox';
+
 import Movies from '../../components/Movies/Movies';
 import Favorites from '../../components/Favorites/Favorites';
-import ListPage from '../ListPage/ListPage';
+
 
 
 function MainPage() {
     return (
         <div className="main-page">
-            <Header />
-            <main className="main-page__content">
-                <section className="main-page__main-section">
-                    <div className="main-page__search-box">
-                        <SearchBox />
-                    </div>
-                    <ListPage/> 
+            <div>
+                <Header />
+            </div>
+            <main >
+                <aside className="main-page__favorites">
                     <div className="main-page__movies">
                         <Movies />
                     </div>
-                    
-                </section>
-                <aside className="main-page__favorites">
-                    <Favorites />
+                    <div>
+                        <Favorites />
+                    </div>
                 </aside>
             </main>
-           
         </div>
     )
 }

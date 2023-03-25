@@ -3,21 +3,17 @@ import { useParams } from 'react-router-dom';
 import './ListPage.css';
 
 function ListPage() {
-    const [movies, setMovies] = useState([
-        { title: 'The Godfather', year: 1972, imdbID: 'tt0068646' }
-    ])
+    const [movies, setMovies] = useState([])
     const { id } = useParams()
 
    
         useEffect(() => {
-            fetch(`https://www.omdbapi.com/?apikey=e235f813&i=${id}`)
+             fetch(`https://acb-api.algoritmika.org/api/movies/list/${id}`)
               .then((response) => response.json())
               .then((data) => {
-                setMovies([{ title: data.Title, year: data.Year, imdbID: data.imdbID }]);
+                setMovies(data.movies);
               })
-              .catch((error) => {
-                alert('Error:', error);
-              });
+            
           }, [id]);
         console.log(id);
    
@@ -28,7 +24,7 @@ function ListPage() {
                 {movies.map((item) => {
                     return (
                         <li key={item.imdbID}>
-                            <a href="https://www.imdb.com/title/tt0068646/" target="_blank" rel="noreferrer" >{item.title} ({item.year})</a>
+                            <a href={`https://www.imdb.com/title/${item.imdbID} `}target="_blank" rel="noreferrer" >{item.Title} ({item.Year})</a>
                         </li>
                     );
                 })}

@@ -5,15 +5,16 @@
 }
 
 .main-page__main-section {
-    padding-left: 40px;
-    box-sizing: border-box;
-    width: 60%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .main-page__search-box {
-    margin-bottom: 35px;
+    margin-top: 35px;
 }
 
 .main-page__favorites {
-    width: 35%;   
+    display: flex;
+    padding: 90px;
 }

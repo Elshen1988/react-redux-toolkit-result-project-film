@@ -29,3 +29,9 @@
     opacity: 0.9;
     transition: all 0.2s linear;
 }
+.listFlex{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  
+    
+}

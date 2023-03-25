@@ -7,13 +7,13 @@ import './Movies.css';
 function Movies() {
     const {movies} = useSelector(state=> state.movies)
     return (
-        <ul className="movies">
+        <div className="movies">
             {movies.map((movie) => (
-                <li className="movies__item" key={movie.imdbID}>
+                <div className="movies__item" key={movie.imdbID}>
                     <MovieItem {...movie} />
-                </li>
+                </div>
             ))}
-        </ul>
+        </div>
     )
 }
 

@@ -2,6 +2,7 @@
     box-sizing: border-box;
     border: 1px solid rgba(0, 8, 7);
     padding: 30px 20px;
+    width: 350px;
 }
 
 .favorites__name {
@@ -18,7 +19,7 @@
 }
 
 .favorites__save {
- 
+    cursor: pointer;
     border: none;
     background-color: #496DDB;
     padding: 10px 15px;
@@ -29,25 +30,34 @@
     margin-left: 80px;
 }
 
+.favorites__save:disabled {
+    background-color: #496ddb5b;
+    cursor: not-allowed;
+}
+
 .favorites__save:hover {
-    cursor: pointer;
+
     opacity: 0.9;
     transition: all 0.2s linear;
 }
-.favoritImg{
+
+.favoritImg {
     width: 30px;
-    
+
 }
-.favoritImgTd{
-   position: relative;
-   top: 10px;
-   padding-right: 10px;
+
+.favoritImgTd {
+    position: relative;
+    top: 10px;
+    padding-right: 10px;
 }
-.favoritTd{
+
+.favoritTd {
     font-weight: 700;
-   color: rgb(5, 114, 49);
+    color: rgb(5, 114, 49);
 }
-.favoritBtn{
+
+.favoritBtn {
     margin-left: 8px;
     cursor: pointer;
     background: none;

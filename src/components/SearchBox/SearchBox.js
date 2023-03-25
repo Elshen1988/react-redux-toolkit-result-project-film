@@ -1,15 +1,25 @@
-import React, {  useState } from 'react';
+import React, {  useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { getmovies } from '../../redux/slice/MoviesSlice';
 import './SearchBox.css';
 
 function SearchBox() {
 
+    useEffect(() => {
+        fetch(`https://www.omdbapi.com/?s=spider&apikey=278924d5`)
+         .then((response) => response.json())
+         .then((data) => dispatch(getmovies(data.Search)))
+            
+         })
+
     const [searchLine, setSearchLine] = useState("")
     const dispatch = useDispatch()
     const searchLineChangeHandler = (e) => {
         setSearchLine(e.target.value)
     }
+
+   
+
     const searchBoxSubmitHandler = (e) => {
         e.preventDefault();
         fetch(`https://www.omdbapi.com/?s=${searchLine}&apikey=278924d5`).then(res => res.json())
